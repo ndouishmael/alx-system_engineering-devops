@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
-# Sets up an nginx web server
-sudo apt-get install -y nginx
-echo "Holberton School rocks!!" > /usr/share/nginx/html/index.html
-sudo service nginx restart
+# bash script to install nginx
+apt-get -y update
+apt-get -y install nginx
+mv /usr/share/nginx/html/index.html /usr/share/nginx/html/index.txt
+echo "Hello World!" > /usr/share/nginx/html/index.html
+service nginx restart
