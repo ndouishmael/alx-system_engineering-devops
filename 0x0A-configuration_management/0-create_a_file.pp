@@ -1,7 +1,7 @@
 # Creates a file owened by www-data
-file { '/tmp/holberton':
+file { '/tmp/school':
     ensure  => file,
-    path    => '/tmp/holberton',
+    path    => '/tmp/school',
     mode    => '0744',
     owner   => 'www-data',
     group   => 'www-data',
