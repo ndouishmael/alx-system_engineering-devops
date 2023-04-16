@@ -1,0 +1,47 @@
++--------------------------+    +--------------------------+
+|        DNS Resolution    |    |    Firewall              |
+|                          |    |                          |
+|  Browser sends DNS       |    |  Traffic passes through  |
+|  request to DNS server   |    |  firewall for security   |
+|                          |    |  and threat detection    |
++--------------------------+    +--------------------------+
+                |
+                v
++--------------------------+    +--------------------------+
+|    Load Balancer         |    |    Web Server            |
+|                          |    |                          |
+|  Traffic is distributed  |    |  Incoming request        |
+|  across multiple web     |    |  hits the appropriate    |
+|  servers for load        |    |  web server IP on the     |
+|  balancing               |    |  appropriate port        |
++--------------------------+    +--------------------------+
+                |
+                v
++--------------------------+    +--------------------------+
+|    SSL Encryption        |    |    Application Server    |
+|                          |    |                          |
+|  Traffic is encrypted    |    |  Web server passes       |
+|  using HTTPS/SSL         |    |  request to application  |
+|  for secure communication|    |  server for further      |
+|                          |    |  processing              |
++--------------------------+    +--------------------------+
+                |
+                v
++--------------------------+
+|    Database              |
+|                          |
+|  Application server      |
+|  requests data from      |
+|  database for generating |
+|  dynamic content         |
++--------------------------+
+                |
+                v
++--------------------------+
+|    Web Page              |
+|                          |
+|  Web server serves the   |
+|  requested web page      |
+|  back to the browser     |
+|  for rendering           |
++--------------------------+
